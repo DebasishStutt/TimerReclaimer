@@ -36,15 +36,15 @@
                 style="@style/Widget.TimeReclaimer.Card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                app:cardBackgroundColor="@drawable/gradient_background">
+                android:layout_marginBottom="20dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="32dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:background="@drawable/gradient_background">
 
                     <ImageView
                         android:layout_width="48dp"

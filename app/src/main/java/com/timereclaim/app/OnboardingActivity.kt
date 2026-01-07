@@ -171,7 +171,9 @@ class OnboardingActivity : AppCompatActivity() {
      * Navigate to main activity
      */
     private fun navigateToMain() {
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+        }
         startActivity(intent)
         finish()
     }

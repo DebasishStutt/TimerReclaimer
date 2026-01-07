@@ -44,7 +44,7 @@
         <activity
             android:name="com.timereclaim.app.OnboardingActivity"
             android:exported="true"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/Theme.TimeReclaimer.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -57,7 +57,8 @@
         <activity
             android:name="com.timereclaim.app.MainActivity"
             android:exported="false"
-            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullSensor"
             android:theme="@style/Theme.TimeReclaimer.NoActionBar" />
 
         <!-- Foreground Tracking Service -->
