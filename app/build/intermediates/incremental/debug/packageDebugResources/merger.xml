@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res"><file name="button_background" path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\drawable\button_background.xml" qualifiers="" type="drawable"/><file name="gradient_background" path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\drawable\gradient_background.xml" qualifiers="" type="drawable"/><file name="ic_clock" path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\drawable\ic_clock.xml" qualifiers="" type="drawable"/><file name="ic_email" path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\drawable\ic_email.xml" qualifiers="" type="drawable"/><file name="ic_notification" path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\drawable\ic_notification.xml" qualifiers="" type="drawable"/><file name="activity_main" path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\layout\activity_main.xml" qualifiers="" type="layout"/><file name="activity_onboarding" path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\layout\activity_onboarding.xml" qualifiers="" type="layout"/><file name="ic_launcher" path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\mipmap-hdpi\ic_launcher.png" qualifiers="hdpi-v4" type="mipmap"/><file name="ic_launcher_round" path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\mipmap-hdpi\ic_launcher_round.png" qualifiers="hdpi-v4" type="mipmap"/><file name="ic_launcher" path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\mipmap-mdpi\ic_launcher.png" qualifiers="mdpi-v4" type="mipmap"/><file name="ic_launcher_round" path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\mipmap-mdpi\ic_launcher_round.png" qualifiers="mdpi-v4" type="mipmap"/><file name="ic_launcher" path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\mipmap-xhdpi\ic_launcher.png" qualifiers="xhdpi-v4" type="mipmap"/><file name="ic_launcher_round" path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\mipmap-xhdpi\ic_launcher_round.png" qualifiers="xhdpi-v4" type="mipmap"/><file name="ic_launcher" path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\mipmap-xxhdpi\ic_launcher.png" qualifiers="xxhdpi-v4" type="mipmap"/><file name="ic_launcher_round" path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\mipmap-xxhdpi\ic_launcher_round.png" qualifiers="xxhdpi-v4" type="mipmap"/><file name="ic_launcher" path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\mipmap-xxxhdpi\ic_launcher.png" qualifiers="xxxhdpi-v4" type="mipmap"/><file name="ic_launcher_round" path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\mipmap-xxxhdpi\ic_launcher_round.png" qualifiers="xxxhdpi-v4" type="mipmap"/><file path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\values\colors.xml" qualifiers=""><color name="primary">#6366F1</color><color name="primary_dark">#4F46E5</color><color name="primary_light">#818CF8</color><color name="accent">#EC4899</color><color name="accent_light">#F472B6</color><color name="background">#FFFFFF</color><color name="background_dark">#1F2937</color><color name="surface">#F9FAFB</color><color name="surface_dark">#111827</color><color name="text_primary">#111827</color><color name="text_secondary">#6B7280</color><color name="text_tertiary">#9CA3AF</color><color name="text_on_primary">#FFFFFF</color><color name="gradient_start">#6366F1</color><color name="gradient_middle">#8B5CF6</color><color name="gradient_end">#EC4899</color><color name="success">#10B981</color><color name="error">#EF4444</color><color name="warning">#F59E0B</color><color name="info">#3B82F6</color><color name="md_theme_light_primary">#6366F1</color><color name="md_theme_light_onPrimary">#FFFFFF</color><color name="md_theme_light_primaryContainer">#E0E7FF</color><color name="md_theme_light_onPrimaryContainer">#312E81</color><color name="md_theme_light_secondary">#EC4899</color><color name="md_theme_light_onSecondary">#FFFFFF</color><color name="md_theme_light_secondaryContainer">#FCE7F3</color><color name="md_theme_light_onSecondaryContainer">#831843</color><color name="md_theme_light_background">#FFFFFF</color><color name="md_theme_light_onBackground">#111827</color><color name="md_theme_light_surface">#F9FAFB</color><color name="md_theme_light_onSurface">#111827</color><color name="md_theme_dark_primary">#818CF8</color><color name="md_theme_dark_onPrimary">#312E81</color><color name="md_theme_dark_primaryContainer">#4F46E5</color><color name="md_theme_dark_onPrimaryContainer">#E0E7FF</color><color name="md_theme_dark_secondary">#F472B6</color><color name="md_theme_dark_onSecondary">#831843</color><color name="md_theme_dark_secondaryContainer">#BE185D</color><color name="md_theme_dark_onSecondaryContainer">#FCE7F3</color><color name="md_theme_dark_background">#111827</color><color name="md_theme_dark_onBackground">#F9FAFB</color><color name="md_theme_dark_surface">#1F2937</color><color name="md_theme_dark_onSurface">#F9FAFB</color><color name="white">#FFFFFF</color><color name="black">#000000</color><color name="transparent">#00000000</color></file><file path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">TimeReclaimer</string><string name="onboarding_title">Welcome to TimeReclaimer</string><string name="onboarding_subtitle">Track your phone-free time and reclaim your productivity</string><string name="onboarding_email_label">Email Address</string><string name="onboarding_email_hint">Enter your email</string><string name="onboarding_email_error">Please enter a valid email address</string><string name="onboarding_permissions_title">Grant Permissions</string><string name="onboarding_permissions_desc">TimeReclaimer needs notification and background permissions to track your phone usage</string><string name="onboarding_btn_continue">Continue</string><string name="onboarding_btn_get_started">Get Started</string><string name="main_title">Today\'s Progress</string><string name="main_time_label">Phone-Free Time</string><string name="main_status_tracking">Tracking active</string><string name="main_status_locked">Phone is locked</string><string name="main_status_unlocked">Phone is unlocked</string><string name="main_stats_title">Statistics</string><string name="main_sessions_label">Lock Sessions</string><string name="main_email_label">Daily Report Email</string><string name="notification_channel_name">Time Tracking</string><string name="notification_channel_desc">Displays your current phone-free time</string><string name="notification_title">TimeReclaimer Active</string><string name="notification_text">Phone-free time: %s</string><string name="notification_locked">Currently locked</string><string name="notification_unlocked">Tap to view details</string><string name="email_subject">TimeReclaimer Daily Report - %s</string><string formatted="false" name="email_body">Hello,\n\nHere\'s your TimeReclaimer report for %s:\n\n📱 Total Phone-Free Time: %s\n⏱️ Lock Sessions: %d\n\nKeep up the great work on reclaiming your time!\n\nBest regards,\nTimeReclaimer</string><string name="email_no_app_error">No email app found. Please install an email client.</string><string name="permission_notification_rationale">Notification permission is required to show your phone-free time</string><string name="permission_battery_rationale">Battery optimization should be disabled for accurate tracking</string><string formatted="false" name="time_format">%02d:%02d:%02d</string><string name="time_hours">h</string><string name="time_minutes">m</string><string name="time_seconds">s</string><string name="ok">OK</string><string name="cancel">Cancel</string><string name="settings">Settings</string></file><file path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\values\themes.xml" qualifiers=""><style name="Base.Theme.TimeReclaimer" parent="Theme.Material3.Light.NoActionBar">
+        
+        <item name="colorPrimary">@color/md_theme_light_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_light_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_light_onPrimaryContainer</item>
+        
+        
+        <item name="colorSecondary">@color/md_theme_light_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_light_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/md_theme_light_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_light_onSecondaryContainer</item>
+        
+        
+        <item name="android:colorBackground">@color/md_theme_light_background</item>
+        <item name="colorOnBackground">@color/md_theme_light_onBackground</item>
+        <item name="colorSurface">@color/md_theme_light_surface</item>
+        <item name="colorOnSurface">@color/md_theme_light_onSurface</item>
+        
+        
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        
+        
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style><style name="Theme.TimeReclaimer" parent="Base.Theme.TimeReclaimer"/><style name="Theme.TimeReclaimer.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style><style name="Widget.TimeReclaimer.Button" parent="Widget.Material3.Button">
+        <item name="cornerRadius">16dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style><style name="Widget.TimeReclaimer.Button.Filled" parent="Widget.TimeReclaimer.Button">
+        <item name="backgroundTint">@color/primary</item>
+    </style><style name="Widget.TimeReclaimer.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="boxStrokeColor">@color/primary</item>
+    </style><style name="Widget.TimeReclaimer.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="contentPadding">20dp</item>
+    </style><style name="TextAppearance.TimeReclaimer.Headline" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style><style name="TextAppearance.TimeReclaimer.Title" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style><style name="TextAppearance.TimeReclaimer.Body" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style><style name="TextAppearance.TimeReclaimer.TimeDisplay" parent="">
+        <item name="android:textSize">64sp</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style></file><file path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\values-night\themes.xml" qualifiers="night-v8"><style name="Base.Theme.TimeReclaimer" parent="Theme.Material3.Dark.NoActionBar">
+        
+        <item name="colorPrimary">@color/md_theme_dark_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_dark_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_dark_onPrimaryContainer</item>
+        
+        
+        <item name="colorSecondary">@color/md_theme_dark_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_dark_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/md_theme_dark_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_dark_onSecondaryContainer</item>
+        
+        
+        <item name="android:colorBackground">@color/md_theme_dark_background</item>
+        <item name="colorOnBackground">@color/md_theme_dark_onBackground</item>
+        <item name="colorSurface">@color/md_theme_dark_surface</item>
+        <item name="colorOnSurface">@color/md_theme_dark_onSurface</item>
+        
+        
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        
+        
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style></file><file name="backup_rules" path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\xml\backup_rules.xml" qualifiers="" type="xml"/><file name="data_extraction_rules" path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\main\res\xml\data_extraction_rules.xml" qualifiers="" type="xml"/></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\All_Learnings\Android_Apps\TimeReclaim\app\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\All_Learnings\Android_Apps\TimeReclaim\app\build\generated\res\resValues\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated" generated-set="generated$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\All_Learnings\Android_Apps\TimeReclaim\app\build\generated\res\resValues\debug"/></dataSet><mergedItems/></merger>

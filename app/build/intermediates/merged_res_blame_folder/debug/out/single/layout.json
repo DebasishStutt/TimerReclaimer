@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\debas\\.gradle\\daemon\\8.2\\com.timereclaim.app-mergeDebugResources-39:\\layout\\activity_onboarding.xml",
+        "source": "C:\\Users\\debas\\.gradle\\daemon\\8.2\\com.timereclaim.app-main-42:\\layout\\activity_onboarding.xml"
+    },
+    {
+        "merged": "com.timereclaim.app-mergeDebugResources-39:/layout/activity_onboarding.xml",
+        "source": "com.timereclaim.app-main-42:/layout/activity_onboarding.xml"
+    },
+    {
+        "merged": "C:\\Users\\debas\\.gradle\\daemon\\8.2\\com.timereclaim.app-mergeDebugResources-39:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\debas\\.gradle\\daemon\\8.2\\com.timereclaim.app-main-42:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.timereclaim.app-mergeDebugResources-39:/layout/activity_main.xml",
+        "source": "com.timereclaim.app-main-42:/layout/activity_main.xml"
+    }
+]

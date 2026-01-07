@@ -1,0 +1,78 @@
+[
+    {
+        "merged": "com.timereclaim.app-debug-40:/xml_data_extraction_rules.xml.flat",
+        "source": "com.timereclaim.app-main-42:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.timereclaim.app-debug-40:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.timereclaim.app-main-42:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.timereclaim.app-debug-40:/layout_activity_main.xml.flat",
+        "source": "com.timereclaim.app-main-42:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.timereclaim.app-debug-40:/drawable_ic_email.xml.flat",
+        "source": "com.timereclaim.app-main-42:/drawable/ic_email.xml"
+    },
+    {
+        "merged": "com.timereclaim.app-debug-40:/layout_activity_onboarding.xml.flat",
+        "source": "com.timereclaim.app-main-42:/layout/activity_onboarding.xml"
+    },
+    {
+        "merged": "com.timereclaim.app-debug-40:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.timereclaim.app-main-42:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.timereclaim.app-debug-40:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.timereclaim.app-main-42:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.timereclaim.app-debug-40:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.timereclaim.app-main-42:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.timereclaim.app-debug-40:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.timereclaim.app-main-42:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.timereclaim.app-debug-40:/drawable_ic_notification.xml.flat",
+        "source": "com.timereclaim.app-main-42:/drawable/ic_notification.xml"
+    },
+    {
+        "merged": "com.timereclaim.app-debug-40:/drawable_button_background.xml.flat",
+        "source": "com.timereclaim.app-main-42:/drawable/button_background.xml"
+    },
+    {
+        "merged": "com.timereclaim.app-debug-40:/xml_backup_rules.xml.flat",
+        "source": "com.timereclaim.app-main-42:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.timereclaim.app-debug-40:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.timereclaim.app-main-42:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.timereclaim.app-debug-40:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.timereclaim.app-main-42:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.timereclaim.app-debug-40:/drawable_gradient_background.xml.flat",
+        "source": "com.timereclaim.app-main-42:/drawable/gradient_background.xml"
+    },
+    {
+        "merged": "com.timereclaim.app-debug-40:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.timereclaim.app-main-42:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.timereclaim.app-debug-40:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.timereclaim.app-main-42:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.timereclaim.app-debug-40:/drawable_ic_clock.xml.flat",
+        "source": "com.timereclaim.app-main-42:/drawable/ic_clock.xml"
+    },
+    {
+        "merged": "com.timereclaim.app-debug-40:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.timereclaim.app-main-42:/mipmap-mdpi/ic_launcher.png"
+    }
+]

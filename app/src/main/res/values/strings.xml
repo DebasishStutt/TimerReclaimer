@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name -->
+    <string name="app_name">TimeReclaimer</string>
+    
+    <!-- Onboarding -->
+    <string name="onboarding_title">Welcome to TimeReclaimer</string>
+    <string name="onboarding_subtitle">Track your phone-free time and reclaim your productivity</string>
+    <string name="onboarding_email_label">Email Address</string>
+    <string name="onboarding_email_hint">Enter your email</string>
+    <string name="onboarding_email_error">Please enter a valid email address</string>
+    <string name="onboarding_permissions_title">Grant Permissions</string>
+    <string name="onboarding_permissions_desc">TimeReclaimer needs notification and background permissions to track your phone usage</string>
+    <string name="onboarding_btn_continue">Continue</string>
+    <string name="onboarding_btn_get_started">Get Started</string>
+    
+    <!-- Main Screen -->
+    <string name="main_title">Today\'s Progress</string>
+    <string name="main_time_label">Phone-Free Time</string>
+    <string name="main_status_tracking">Tracking active</string>
+    <string name="main_status_locked">Phone is locked</string>
+    <string name="main_status_unlocked">Phone is unlocked</string>
+    <string name="main_stats_title">Statistics</string>
+    <string name="main_sessions_label">Lock Sessions</string>
+    <string name="main_email_label">Daily Report Email</string>
+    
+    <!-- Notification -->
+    <string name="notification_channel_name">Time Tracking</string>
+    <string name="notification_channel_desc">Displays your current phone-free time</string>
+    <string name="notification_title">TimeReclaimer Active</string>
+    <string name="notification_text">Phone-free time: %s</string>
+    <string name="notification_locked">Currently locked</string>
+    <string name="notification_unlocked">Tap to view details</string>
+    
+    <!-- Daily Report Email -->
+    <string name="email_subject">TimeReclaimer Daily Report - %s</string>
+    <string name="email_body" formatted="false">Hello,\n\nHere\'s your TimeReclaimer report for %s:\n\n📱 Total Phone-Free Time: %s\n⏱️ Lock Sessions: %d\n\nKeep up the great work on reclaiming your time!\n\nBest regards,\nTimeReclaimer</string>
+    <string name="email_no_app_error">No email app found. Please install an email client.</string>
+    
+    <!-- Permissions -->
+    <string name="permission_notification_rationale">Notification permission is required to show your phone-free time</string>
+    <string name="permission_battery_rationale">Battery optimization should be disabled for accurate tracking</string>
+    
+    <!-- Time Format -->
+    <string name="time_format" formatted="false">%02d:%02d:%02d</string>
+    <string name="time_hours">h</string>
+    <string name="time_minutes">m</string>
+    <string name="time_seconds">s</string>
+    
+    <!-- General -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="settings">Settings</string>
+</resources>
