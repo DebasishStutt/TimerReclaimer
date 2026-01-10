@@ -14,10 +14,42 @@ class NotificationHelper(private val context: Context) {
     
     companion object {
         const val CHANNEL_ID = "timereclaim_tracking_channel"
+        const val REPORT_CHANNEL_ID = "timereclaim_report_channel"
         const val NOTIFICATION_ID = 1001
+        const val REPORT_NOTIFICATION_ID = 1002
     }
     
     private val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+
+    init {
+        createNotificationChannels()
+    }
+
+    private fun createNotificationChannels() {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            // Tracking Channel
+            val trackingChannel = android.app.NotificationChannel(
+                CHANNEL_ID,
+                context.getString(R.string.notification_channel_name),
+                NotificationManager.IMPORTANCE_LOW
+            ).apply {
+                description = context.getString(R.string.notification_channel_desc)
+                setShowBadge(false)
+            }
+
+            // Report Channel
+            val reportChannel = android.app.NotificationChannel(
+                REPORT_CHANNEL_ID,
+                context.getString(R.string.report_notification_channel_name),
+                NotificationManager.IMPORTANCE_DEFAULT
+            ).apply {
+                description = context.getString(R.string.report_notification_channel_desc)
+            }
+
+            notificationManager.createNotificationChannel(trackingChannel)
+            notificationManager.createNotificationChannel(reportChannel)
+        }
+    }
     
     /**
      * Create foreground service notification
@@ -68,5 +100,50 @@ class NotificationHelper(private val context: Context) {
      */
     fun cancelNotification() {
         notificationManager.cancel(NOTIFICATION_ID)
+    }
+
+    /**
+     * Show notification for the daily report
+     */
+    fun showReportNotification(email: String, subject: String, body: String, dateString: String) {
+        val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
+            data = android.net.Uri.parse("mailto:")
+            putExtra(Intent.EXTRA_EMAIL, arrayOf(email))
+            putExtra(Intent.EXTRA_SUBJECT, subject)
+            putExtra(Intent.EXTRA_TEXT, body)
+        }
+
+        val pendingIntent = PendingIntent.getActivity(
+            context,
+            REPORT_NOTIFICATION_ID,
+            Intent.createChooser(emailIntent, context.getString(R.string.main_email_label) ?: "Send Email"),
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+
+        val notification = NotificationCompat.Builder(context, REPORT_CHANNEL_ID)
+            .setContentTitle(context.getString(R.string.report_notification_title))
+            .setContentText(context.getString(R.string.report_notification_text, dateString))
+            .setSmallIcon(R.drawable.ic_notification)
+            .setAutoCancel(true)
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .setContentIntent(pendingIntent)
+            .build()
+
+        notificationManager.notify(REPORT_NOTIFICATION_ID, notification)
+    }
+
+    /**
+     * Show a simple notification without pending intent
+     */
+    fun showSimpleNotification(title: String, text: String) {
+        val notification = NotificationCompat.Builder(context, REPORT_CHANNEL_ID)
+            .setContentTitle(title)
+            .setContentText(text)
+            .setSmallIcon(R.drawable.ic_notification)
+            .setAutoCancel(true)
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .build()
+        
+        notificationManager.notify(REPORT_NOTIFICATION_ID, notification)
     }
 }

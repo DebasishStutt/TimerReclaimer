@@ -4,12 +4,14 @@ package com.timereclaim.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import com.timereclaim.app.R;
 import java.lang.NullPointerException;
@@ -19,6 +21,12 @@ import java.lang.String;
 public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
+
+  @NonNull
+  public final ImageButton btnMenu;
+
+  @NonNull
+  public final MaterialButton btnSendReport;
 
   @NonNull
   public final TextView emailDisplay;
@@ -38,10 +46,13 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final TextView timeDisplay;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull TextView emailDisplay,
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull ImageButton btnMenu,
+      @NonNull MaterialButton btnSendReport, @NonNull TextView emailDisplay,
       @NonNull TextView headerTitle, @NonNull TextView sessionsCount, @NonNull TextView statusText,
       @NonNull MaterialCardView timeCard, @NonNull TextView timeDisplay) {
     this.rootView = rootView;
+    this.btnMenu = btnMenu;
+    this.btnSendReport = btnSendReport;
     this.emailDisplay = emailDisplay;
     this.headerTitle = headerTitle;
     this.sessionsCount = sessionsCount;
@@ -77,6 +88,18 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnMenu;
+      ImageButton btnMenu = ViewBindings.findChildViewById(rootView, id);
+      if (btnMenu == null) {
+        break missingId;
+      }
+
+      id = R.id.btnSendReport;
+      MaterialButton btnSendReport = ViewBindings.findChildViewById(rootView, id);
+      if (btnSendReport == null) {
+        break missingId;
+      }
+
       id = R.id.emailDisplay;
       TextView emailDisplay = ViewBindings.findChildViewById(rootView, id);
       if (emailDisplay == null) {
@@ -113,8 +136,8 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, emailDisplay, headerTitle,
-          sessionsCount, statusText, timeCard, timeDisplay);
+      return new ActivityMainBinding((ConstraintLayout) rootView, btnMenu, btnSendReport,
+          emailDisplay, headerTitle, sessionsCount, statusText, timeCard, timeDisplay);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

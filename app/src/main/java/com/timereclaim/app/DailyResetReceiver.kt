@@ -8,6 +8,10 @@ import android.content.Intent
 import android.net.Uri
 import android.util.Log
 import android.widget.Toast
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -82,36 +86,45 @@ class DailyResetReceiver : BroadcastReceiver() {
     }
     
     /**
-     * Send daily report via email intent
+     * Send daily report
      */
     private fun sendDailyReport(context: Context, email: String, prefs: PreferencesManager) {
-        val dateFormat = SimpleDateFormat("MMMM dd, yyyy", Locale.getDefault())
-        val today = dateFormat.format(Date())
-        
-        val formattedTime = prefs.getFormattedAccumulatedTime()
-        val sessionCount = prefs.lockSessionCount
-        
-        val subject = context.getString(R.string.email_subject, today)
-        val body = context.getString(R.string.email_body, today, formattedTime, sessionCount)
-        
-        val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
-            data = Uri.parse("mailto:")
-            putExtra(Intent.EXTRA_EMAIL, arrayOf(email))
-            putExtra(Intent.EXTRA_SUBJECT, subject)
-            putExtra(Intent.EXTRA_TEXT, body)
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK
-        }
-        
-        try {
-            context.startActivity(emailIntent)
-            Log.d(TAG, "Email intent launched successfully")
-        } catch (e: Exception) {
-            Log.e(TAG, "Failed to launch email app", e)
-            Toast.makeText(
-                context,
-                context.getString(R.string.email_no_app_error),
-                Toast.LENGTH_LONG
-            ).show()
+        val subject = prefs.getReportSubject(context)
+        val body = prefs.getReportBody(context)
+        val date = prefs.getReportDate()
+        val senderEmail = prefs.senderEmail
+        val appPassword = prefs.senderAppPassword
+
+        val notificationHelper = NotificationHelper(context)
+
+        // Try automated sending if credentials are set
+        if (!senderEmail.isNullOrEmpty() && !appPassword.isNullOrEmpty()) {
+            // Use GlobalScope for this short background task in receiver
+            @Suppress("OPT_IN_USAGE")
+            kotlinx.coroutines.GlobalScope.launch(kotlinx.coroutines.Dispatchers.IO) {
+                val success = EmailSender.sendEmail(
+                    senderEmail,
+                    appPassword,
+                    email,
+                    subject,
+                    body
+                )
+
+                kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.Main) {
+                    if (success) {
+                        notificationHelper.showSimpleNotification(
+                            context.getString(R.string.report_sent_success),
+                            context.getString(R.string.report_notification_text, date)
+                        )
+                    } else {
+                        // Fallback to manual intent notification if SMTP fails
+                        notificationHelper.showReportNotification(email, subject, body, date)
+                    }
+                }
+            }
+        } else {
+            // No credentials, use manual intent notification
+            notificationHelper.showReportNotification(email, subject, body, date)
         }
     }
 }

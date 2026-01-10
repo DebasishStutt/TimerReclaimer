@@ -9,6 +9,7 @@
         android:targetSdkVersion="34" />
 
     <!-- Required permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
@@ -58,6 +59,27 @@
             android:name="com.timereclaim.app.MainActivity"
             android:exported="false"
             android:launchMode="singleTask"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.TimeReclaimer.NoActionBar" />
+
+        <!-- About Activity -->
+        <activity
+            android:name="com.timereclaim.app.AboutActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.TimeReclaimer.NoActionBar" />
+
+        <!-- Email Settings Activity -->
+        <activity
+            android:name="com.timereclaim.app.EmailSettingsActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.TimeReclaimer.NoActionBar" />
+
+        <!-- Developer Activity -->
+        <activity
+            android:name="com.timereclaim.app.DeveloperActivity"
+            android:exported="false"
             android:screenOrientation="fullSensor"
             android:theme="@style/Theme.TimeReclaimer.NoActionBar" />
 

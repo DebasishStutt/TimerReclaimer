@@ -1,13 +1,5 @@
 [
     {
-        "merged": "com.timereclaim.app-debug-40:/layout_activity_main.xml.flat",
-        "source": "com.timereclaim.app-main-42:/layout/activity_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\mipmap-xxhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\drawable_ic_email.xml.flat",
         "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\drawable\\ic_email.xml"
     },
@@ -20,10 +12,6 @@
         "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\layout_activity_onboarding.xml.flat",
-        "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\layout\\activity_onboarding.xml"
-    },
-    {
         "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\xml_backup_rules.xml.flat",
         "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\xml\\backup_rules.xml"
     },
@@ -32,28 +20,24 @@
         "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\drawable\\ic_notification.xml"
     },
     {
-        "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\menu_menu_main.xml.flat",
+        "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\menu\\menu_main.xml"
     },
     {
         "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\drawable_ic_clock.xml.flat",
+        "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\drawable\\ic_clock.xml"
     },
     {
         "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\drawable_gradient_background.xml.flat",
         "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\drawable\\gradient_background.xml"
     },
     {
-        "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\drawable_ic_clock.xml.flat",
-        "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\drawable\\ic_clock.xml"
-    },
-    {
-        "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\mipmap-mdpi_ic_launcher.png.flat",
@@ -64,6 +48,10 @@
         "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\layout_activity_about.xml.flat",
+        "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\layout\\activity_about.xml"
+    },
+    {
         "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\drawable_button_background.xml.flat",
         "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\drawable\\button_background.xml"
     },
@@ -72,11 +60,51 @@
         "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "com.timereclaim.app-debug-40:/layout_activity_email_settings.xml.flat",
+        "source": "com.timereclaim.app-main-42:/layout/activity_email_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\layout_activity_onboarding.xml.flat",
+        "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\layout\\activity_onboarding.xml"
+    },
+    {
+        "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\drawable_ic_menu.xml.flat",
+        "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\drawable\\ic_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\drawable_developer_photo.jpg.flat",
+        "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\drawable\\developer_photo.jpg"
+    },
+    {
+        "merged": "com.timereclaim.app-debug-40:/menu_menu_main.xml.flat",
+        "source": "com.timereclaim.app-main-42:/menu/menu_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\drawable_ic_linkedin.xml.flat",
+        "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\drawable\\ic_linkedin.xml"
+    },
+    {
+        "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\layout_activity_developer.xml.flat",
+        "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\layout\\activity_developer.xml"
     },
     {
         "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-debug-40:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\debas\\.gradle\\daemon\\9.0-milestone-1\\com.timereclaim.app-main-42:\\mipmap-xhdpi\\ic_launcher.png"
     }
 ]

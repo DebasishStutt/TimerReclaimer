@@ -36,11 +36,100 @@ class MainActivity : AppCompatActivity() {
         // Set email
         emailDisplay.text = prefsManager.userEmail ?: "No email"
         
+        // Setup send report button
+        findViewById<android.view.View>(R.id.btnSendReport).setOnClickListener {
+            sendOnDemandReport()
+        }
+
+        // Setup menu button
+        findViewById<android.widget.ImageButton>(R.id.btnMenu).setOnClickListener {
+            showPopupMenu(it)
+        }
+        
         // Ensure tracking service is running
         ensureTrackingServiceRunning()
         
         // Start UI update loop
         startUIUpdates()
+    }
+
+    /**
+     * Show popup menu
+     */
+    private fun showPopupMenu(view: android.view.View) {
+        val popup = android.widget.PopupMenu(this, view)
+        popup.menuInflater.inflate(R.menu.menu_main, popup.menu)
+        
+        popup.setOnMenuItemClickListener { item ->
+            when (item.itemId) {
+                R.id.action_about -> {
+                    startActivity(Intent(this, AboutActivity::class.java))
+                    true
+                }
+                R.id.action_email_settings -> {
+                    startActivity(Intent(this, EmailSettingsActivity::class.java))
+                    true
+                }
+                R.id.action_developer -> {
+                    startActivity(Intent(this, DeveloperActivity::class.java))
+                    true
+                }
+                else -> false
+            }
+        }
+        popup.show()
+    }
+
+    /**
+     * Send email report on demand
+     */
+    private fun sendOnDemandReport() {
+        val email = prefsManager.userEmail ?: return
+        val subject = prefsManager.getReportSubject(this)
+        val body = prefsManager.getReportBody(this)
+        val senderEmail = prefsManager.senderEmail
+        val appPassword = prefsManager.senderAppPassword
+
+        // If automated credentials exist, use them
+        if (!senderEmail.isNullOrEmpty() && !appPassword.isNullOrEmpty()) {
+            lifecycleScope.launch {
+                val progressToast = android.widget.Toast.makeText(this@MainActivity, "Sending report...", android.widget.Toast.LENGTH_SHORT)
+                progressToast.show()
+                
+                val success = EmailSender.sendEmail(senderEmail, appPassword, email, subject, body)
+                
+                if (success) {
+                    android.widget.Toast.makeText(this@MainActivity, getString(R.string.report_sent_success), android.widget.Toast.LENGTH_LONG).show()
+                } else {
+                    // Fallback to manual intent
+                    launchManualEmailIntent(email, subject, body)
+                }
+            }
+        } else {
+            // No credentials, use manual intent
+            launchManualEmailIntent(email, subject, body)
+        }
+    }
+
+    private fun launchManualEmailIntent(email: String, subject: String, body: String) {
+        val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
+            data = android.net.Uri.parse("mailto:")
+            putExtra(Intent.EXTRA_EMAIL, arrayOf(email))
+            putExtra(Intent.EXTRA_SUBJECT, subject)
+            putExtra(Intent.EXTRA_TEXT, body)
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        }
+        
+        try {
+            startActivity(Intent.createChooser(emailIntent, getString(R.string.main_email_label)))
+        } catch (e: Exception) {
+            android.util.Log.e("MainActivity", "Failed to launch email app", e)
+            android.widget.Toast.makeText(
+                this,
+                getString(R.string.email_no_app_error),
+                android.widget.Toast.LENGTH_LONG
+            ).show()
+        }
     }
     
     /**

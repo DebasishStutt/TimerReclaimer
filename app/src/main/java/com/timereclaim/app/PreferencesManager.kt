@@ -23,6 +23,8 @@ class PreferencesManager(context: Context) {
         private const val KEY_IS_LOCKED = "is_locked"
         private const val KEY_LAST_RESET_DATE = "last_reset_date"
         private const val KEY_LOCK_SESSION_COUNT = "lock_session_count"
+        private const val KEY_SENDER_EMAIL = "sender_email"
+        private const val KEY_SENDER_APP_PASSWORD = "sender_app_password"
         
         @Volatile
         private var instance: PreferencesManager? = null
@@ -38,6 +40,14 @@ class PreferencesManager(context: Context) {
     var userEmail: String?
         get() = prefs.getString(KEY_USER_EMAIL, null)
         set(value) = prefs.edit().putString(KEY_USER_EMAIL, value).apply()
+
+    var senderEmail: String?
+        get() = prefs.getString(KEY_SENDER_EMAIL, null)
+        set(value) = prefs.edit().putString(KEY_SENDER_EMAIL, value).apply()
+
+    var senderAppPassword: String?
+        get() = prefs.getString(KEY_SENDER_APP_PASSWORD, null)
+        set(value) = prefs.edit().putString(KEY_SENDER_APP_PASSWORD, value).apply()
     
     // Onboarding Status
     var isOnboardingComplete: Boolean
@@ -117,5 +127,32 @@ class PreferencesManager(context: Context) {
      */
     fun incrementSessionCount() {
         lockSessionCount += 1
+    }
+
+    /**
+     * Get report date string
+     */
+    fun getReportDate(): String {
+        val dateFormat = SimpleDateFormat("MMMM dd, yyyy", Locale.getDefault())
+        return dateFormat.format(Date())
+    }
+
+    /**
+     * Get report subject
+     */
+    fun getReportSubject(context: Context): String {
+        return context.getString(R.string.email_subject, getReportDate())
+    }
+
+    /**
+     * Get report body
+     */
+    fun getReportBody(context: Context): String {
+        return context.getString(
+            R.string.email_body,
+            getReportDate(),
+            getFormattedAccumulatedTime(),
+            lockSessionCount
+        )
     }
 }

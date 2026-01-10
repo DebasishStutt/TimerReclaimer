@@ -3033,6 +3033,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable developer_photo
 drawable gradient_background
 drawable ic_arrow_back_black_24
 drawable ic_call_answer
@@ -3046,9 +3047,11 @@ drawable ic_clock
 drawable ic_clock_black_24dp
 drawable ic_email
 drawable ic_keyboard_black_24dp
+drawable ic_linkedin
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
 drawable ic_m3_chip_close
+drawable ic_menu
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
@@ -3144,6 +3147,7 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
+id aboutTitle
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -3181,6 +3185,7 @@ id accessibility_custom_action_9
 id actionDown
 id actionDownUp
 id actionUp
+id action_about
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -3190,7 +3195,9 @@ id action_bar_subtitle
 id action_bar_title
 id action_container
 id action_context_bar
+id action_developer
 id action_divider
+id action_email_settings
 id action_image
 id action_menu_divider
 id action_menu_presenter
@@ -3228,6 +3235,10 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnBack
+id btnMenu
+id btnSaveSettings
+id btnSendReport
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3279,6 +3290,7 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id developerTitle
 id dialog_button
 id dimensions
 id direct
@@ -3313,6 +3325,8 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id etAppPassword
+id etSenderEmail
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3342,6 +3356,7 @@ id graph_wrap
 id group_divider
 id grouping
 id groups
+id headerBackground
 id headerTitle
 id header_title
 id hide_ime_id
@@ -3374,6 +3389,7 @@ id legacy
 id line1
 id line3
 id linear
+id linkedinText
 id listMode
 id list_item
 id logoImage
@@ -3528,6 +3544,7 @@ id select_dialog_listview
 id selected
 id selection_type
 id sessionsCount
+id settingsTitle
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3622,6 +3639,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id versionDisplay
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3754,6 +3772,9 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_about
+layout activity_developer
+layout activity_email_settings
 layout activity_main
 layout activity_onboarding
 layout custom_dialog
@@ -3835,6 +3856,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu menu_main
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
@@ -3865,9 +3887,13 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string about_title
+string about_version_label
 string androidx_startup
+string app_description
 string app_name
 string appbar_scrolling_view_behavior
+string back
 string bottom_sheet_behavior
 string bottomsheet_action_collapse
 string bottomsheet_action_expand
@@ -3886,8 +3912,18 @@ string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string clear_text_end_icon_content_description
+string developer_linkedin
+string developer_linkedin_url
+string developer_name
+string developer_title
 string email_body
 string email_no_app_error
+string email_settings_desc
+string email_settings_password_label
+string email_settings_save
+string email_settings_saved
+string email_settings_sender_label
+string email_settings_title
 string email_subject
 string error_a11y_label
 string error_icon_content_description
@@ -3913,6 +3949,7 @@ string m3_sys_motion_easing_linear
 string m3_sys_motion_easing_standard
 string m3_sys_motion_easing_standard_accelerate
 string m3_sys_motion_easing_standard_decelerate
+string main_btn_send_report
 string main_email_label
 string main_sessions_label
 string main_stats_title
@@ -4028,6 +4065,12 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string permission_battery_rationale
 string permission_notification_rationale
+string report_notification_channel_desc
+string report_notification_channel_name
+string report_notification_text
+string report_notification_title
+string report_sent_failure
+string report_sent_success
 string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description

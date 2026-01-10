@@ -47,11 +47,26 @@
     <color name="transparent">#00000000</color>
     <color name="warning">#F59E0B</color>
     <color name="white">#FFFFFF</color>
+    <string name="about_title">About</string>
+    <string name="about_version_label">Version</string>
+    <string name="app_description">Reclaim your time and focus on what matters.</string>
     <string name="app_name">TimeReclaimer</string>
+    <string name="back">Back</string>
     <string name="cancel">Cancel</string>
+    <string name="developer_linkedin">LinkedIn</string>
+    <string name="developer_linkedin_url">https://www.linkedin.com/in/erdebasish/</string>
+    <string name="developer_name">Debasish Mukherjee</string>
+    <string name="developer_title">Developer</string>
     <string formatted="false" name="email_body">Hello,\n\nHere\'s your TimeReclaimer report for %s:\n\n📱 Total Phone-Free Time: %s\n⏱️ Lock Sessions: %d\n\nKeep up the great work on reclaiming your time!\n\nBest regards,\nTimeReclaimer</string>
     <string name="email_no_app_error">No email app found. Please install an email client.</string>
+    <string name="email_settings_desc">Configure the Gmail account that will send automated reports to you. Follow the instructions to generate an app password.</string>
+    <string name="email_settings_password_label">16-char App Password</string>
+    <string name="email_settings_save">Save Settings</string>
+    <string name="email_settings_saved">Settings saved successfully</string>
+    <string name="email_settings_sender_label">Sender Gmail Address</string>
+    <string name="email_settings_title">Email Settings</string>
     <string name="email_subject">TimeReclaimer Daily Report - %s</string>
+    <string name="main_btn_send_report">Send Report Now</string>
     <string name="main_email_label">Daily Report Email</string>
     <string name="main_sessions_label">Lock Sessions</string>
     <string name="main_stats_title">Statistics</string>
@@ -78,6 +93,12 @@
     <string name="onboarding_title">Welcome to TimeReclaimer</string>
     <string name="permission_battery_rationale">Battery optimization should be disabled for accurate tracking</string>
     <string name="permission_notification_rationale">Notification permission is required to show your phone-free time</string>
+    <string name="report_notification_channel_desc">Notifications for your daily phone-free time reports</string>
+    <string name="report_notification_channel_name">Daily Reports</string>
+    <string name="report_notification_text">Your report for %s is ready. Tap to email.</string>
+    <string name="report_notification_title">Daily Report Ready</string>
+    <string name="report_sent_failure">Failed to send report. Check email settings.</string>
+    <string name="report_sent_success">Daily report sent successfully</string>
     <string name="settings">Settings</string>
     <string formatted="false" name="time_format">%02d:%02d:%02d</string>
     <string name="time_hours">h</string>
