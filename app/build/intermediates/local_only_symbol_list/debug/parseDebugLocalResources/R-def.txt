@@ -103,7 +103,9 @@ string developer_linkedin_url
 string developer_name
 string developer_title
 string email_body
+string email_error_no_recipient
 string email_no_app_error
+string email_sending_to
 string email_settings_desc
 string email_settings_password_label
 string email_settings_save

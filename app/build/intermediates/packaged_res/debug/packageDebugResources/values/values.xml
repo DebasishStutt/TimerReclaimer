@@ -58,7 +58,9 @@
     <string name="developer_name">Debasish Mukherjee</string>
     <string name="developer_title">Developer</string>
     <string formatted="false" name="email_body">Hello,\n\nHere\'s your TimeReclaimer report for %s:\n\n📱 Total Phone-Free Time: %s\n⏱️ Lock Sessions: %d\n\nKeep up the great work on reclaiming your time!\n\nBest regards,\nTimeReclaimer</string>
+    <string name="email_error_no_recipient">No recipient email found. Please run onboarding or check settings.</string>
     <string name="email_no_app_error">No email app found. Please install an email client.</string>
+    <string name="email_sending_to">Email being sent to %s</string>
     <string name="email_settings_desc">Configure the Gmail account that will send automated reports to you. Follow the instructions to generate an app password.</string>
     <string name="email_settings_password_label">16-char App Password</string>
     <string name="email_settings_save">Save Settings</string>

@@ -49,6 +49,12 @@ class MainActivity : AppCompatActivity() {
         // Ensure tracking service is running
         ensureTrackingServiceRunning()
         
+        // Ensure daily alarm is scheduled
+        DailyResetReceiver.scheduleDailyAlarm(this)
+        
+        // Check exact alarm permission on Android 12+
+        checkExactAlarmPermission()
+        
         // Start UI update loop
         startUIUpdates()
     }
@@ -84,18 +90,31 @@ class MainActivity : AppCompatActivity() {
      * Send email report on demand
      */
     private fun sendOnDemandReport() {
-        val email = prefsManager.userEmail ?: return
+        val email = prefsManager.userEmail
+        if (email.isNullOrEmpty()) {
+            android.widget.Toast.makeText(
+                this,
+                getString(R.string.email_error_no_recipient),
+                android.widget.Toast.LENGTH_LONG
+            ).show()
+            return
+        }
+
         val subject = prefsManager.getReportSubject(this)
         val body = prefsManager.getReportBody(this)
         val senderEmail = prefsManager.senderEmail
         val appPassword = prefsManager.senderAppPassword
 
+        // Confirmation message
+        android.widget.Toast.makeText(
+            this,
+            getString(R.string.email_sending_to, email),
+            android.widget.Toast.LENGTH_LONG
+        ).show()
+
         // If automated credentials exist, use them
         if (!senderEmail.isNullOrEmpty() && !appPassword.isNullOrEmpty()) {
             lifecycleScope.launch {
-                val progressToast = android.widget.Toast.makeText(this@MainActivity, "Sending report...", android.widget.Toast.LENGTH_SHORT)
-                progressToast.show()
-                
                 val success = EmailSender.sendEmail(senderEmail, appPassword, email, subject, body)
                 
                 if (success) {
@@ -132,6 +151,31 @@ class MainActivity : AppCompatActivity() {
         }
     }
     
+    /**
+     * Check if exact alarm permission is granted (Android 12+)
+     */
+    private fun checkExactAlarmPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            val alarmManager = getSystemService(android.content.Context.ALARM_SERVICE) as android.app.AlarmManager
+            if (!alarmManager.canScheduleExactAlarms()) {
+                android.widget.Toast.makeText(
+                    this,
+                    "Please grant 'Alarms & Reminders' permission for accurate reporting.",
+                    android.widget.Toast.LENGTH_LONG
+                ).show()
+                
+                try {
+                    val intent = Intent(android.provider.Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM).apply {
+                        data = android.net.Uri.parse("package:$packageName")
+                    }
+                    startActivity(intent)
+                } catch (e: Exception) {
+                    android.util.Log.e("MainActivity", "Failed to launch exact alarm settings", e)
+                }
+            }
+        }
+    }
+
     /**
      * Ensure tracking service is running
      */

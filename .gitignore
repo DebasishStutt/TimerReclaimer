@@ -4,7 +4,7 @@ gen/
 out/
 build/
 .gradle/
-./app/build/*
+./app/build
 
 # Keystores and sensitive info
 *.jks

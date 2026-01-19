@@ -18,6 +18,9 @@ class BootReceiver : BroadcastReceiver() {
             
             // Only restart if onboarding is complete
             if (prefs.isOnboardingComplete) {
+                // Reschedule daily alarm
+                DailyResetReceiver.scheduleDailyAlarm(context)
+                
                 val serviceIntent = Intent(context, TrackingService::class.java)
                 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

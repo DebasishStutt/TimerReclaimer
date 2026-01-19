@@ -6,6 +6,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
 import android.util.Log
 import android.widget.Toast
 import kotlinx.coroutines.Dispatchers
@@ -29,6 +30,14 @@ class DailyResetReceiver : BroadcastReceiver() {
          */
         fun scheduleDailyAlarm(context: Context) {
             val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+            
+            // Check for exact alarm permission on Android 12+
+            val canScheduleExact = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                alarmManager.canScheduleExactAlarms()
+            } else {
+                true
+            }
+
             val intent = Intent(context, DailyResetReceiver::class.java).apply {
                 action = ACTION_DAILY_RESET
             }
@@ -53,14 +62,32 @@ class DailyResetReceiver : BroadcastReceiver() {
                 }
             }
             
-            Log.d(TAG, "Scheduling alarm for: ${calendar.time}")
+            Log.d(TAG, "Scheduling alarm for: ${calendar.time} (Exact: $canScheduleExact)")
             
-            // Schedule exact alarm at 23:59
-            alarmManager.setExactAndAllowWhileIdle(
-                AlarmManager.RTC_WAKEUP,
-                calendar.timeInMillis,
-                pendingIntent
-            )
+            try {
+                if (canScheduleExact) {
+                    alarmManager.setExactAndAllowWhileIdle(
+                        AlarmManager.RTC_WAKEUP,
+                        calendar.timeInMillis,
+                        pendingIntent
+                    )
+                } else {
+                    // Fallback to inexact alarm if permission is missing
+                    alarmManager.setAndAllowWhileIdle(
+                        AlarmManager.RTC_WAKEUP,
+                        calendar.timeInMillis,
+                        pendingIntent
+                    )
+                }
+            } catch (e: SecurityException) {
+                Log.e(TAG, "SecurityException while scheduling exact alarm", e)
+                // Fallback to inexact
+                alarmManager.setAndAllowWhileIdle(
+                    AlarmManager.RTC_WAKEUP,
+                    calendar.timeInMillis,
+                    pendingIntent
+                )
+            }
         }
     }
     
@@ -70,61 +97,75 @@ class DailyResetReceiver : BroadcastReceiver() {
         if (intent.action == ACTION_DAILY_RESET) {
             Log.d(TAG, "Daily reset triggered")
             
+            // Reschedule for tomorrow
+            scheduleDailyAlarm(context)
+            
             val prefs = PreferencesManager.getInstance(context)
             val email = prefs.userEmail
             
             if (email != null) {
-                sendDailyReport(context, email, prefs)
+                // IMPORTANT: Capture report data BEFORE resetting counters
+                val subject = prefs.getReportSubject(context)
+                val body = prefs.getReportBody(context)
+                val date = prefs.getReportDate()
+
+                // Use goAsync to allow background work to complete
+                val pendingResult = goAsync()
+                GlobalScope.launch {
+                    try {
+                        sendDailyReportInternal(context, email, subject, body, date, prefs)
+                    } finally {
+                        pendingResult.finish()
+                    }
+                }
             }
             
             // Reset counters for new day
             prefs.resetDailyCounters()
-            
-            // Schedule next alarm
-            scheduleDailyAlarm(context)
         }
     }
     
     /**
-     * Send daily report
+     * Internal method to send the captured report
      */
-    private fun sendDailyReport(context: Context, email: String, prefs: PreferencesManager) {
-        val subject = prefs.getReportSubject(context)
-        val body = prefs.getReportBody(context)
-        val date = prefs.getReportDate()
+    private suspend fun sendDailyReportInternal(
+        context: Context,
+        email: String,
+        subject: String,
+        body: String,
+        date: String,
+        prefs: PreferencesManager
+    ) {
         val senderEmail = prefs.senderEmail
         val appPassword = prefs.senderAppPassword
-
         val notificationHelper = NotificationHelper(context)
 
         // Try automated sending if credentials are set
         if (!senderEmail.isNullOrEmpty() && !appPassword.isNullOrEmpty()) {
-            // Use GlobalScope for this short background task in receiver
-            @Suppress("OPT_IN_USAGE")
-            kotlinx.coroutines.GlobalScope.launch(kotlinx.coroutines.Dispatchers.IO) {
-                val success = EmailSender.sendEmail(
-                    senderEmail,
-                    appPassword,
-                    email,
-                    subject,
-                    body
-                )
+            val success = EmailSender.sendEmail(
+                senderEmail,
+                appPassword,
+                email,
+                subject,
+                body
+            )
 
-                kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.Main) {
-                    if (success) {
-                        notificationHelper.showSimpleNotification(
-                            context.getString(R.string.report_sent_success),
-                            context.getString(R.string.report_notification_text, date)
-                        )
-                    } else {
-                        // Fallback to manual intent notification if SMTP fails
-                        notificationHelper.showReportNotification(email, subject, body, date)
-                    }
+            withContext(Dispatchers.Main) {
+                if (success) {
+                    notificationHelper.showSimpleNotification(
+                        context.getString(R.string.report_sent_success),
+                        context.getString(R.string.report_notification_text, date)
+                    )
+                } else {
+                    // Fallback to manual intent notification if SMTP fails
+                    notificationHelper.showReportNotification(email, subject, body, date)
                 }
             }
         } else {
             // No credentials, use manual intent notification
-            notificationHelper.showReportNotification(email, subject, body, date)
+            withContext(Dispatchers.Main) {
+                notificationHelper.showReportNotification(email, subject, body, date)
+            }
         }
     }
 }

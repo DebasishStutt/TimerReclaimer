@@ -77,4 +77,6 @@
     <string name="email_settings_saved">Settings saved successfully</string>
     <string name="report_sent_success">Daily report sent successfully</string>
     <string name="report_sent_failure">Failed to send report. Check email settings.</string>
+    <string name="email_error_no_recipient">No recipient email found. Please run onboarding or check settings.</string>
+    <string name="email_sending_to">Email being sent to %s</string>
 </resources>

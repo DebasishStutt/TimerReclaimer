@@ -3916,7 +3916,9 @@ int string developer_linkedin_url 0x7f0f00d4
 int string developer_name 0x7f0f00d5
 int string developer_title 0x7f0f00d6
 int string email_body 0x7f0f0030
+int string email_error_no_recipient 0x7f0f00df
 int string email_no_app_error 0x7f0f0031
+int string email_sending_to 0x7f0f00e0
 int string email_settings_desc 0x7f0f00d7
 int string email_settings_password_label 0x7f0f00d8
 int string email_settings_save 0x7f0f00d9
